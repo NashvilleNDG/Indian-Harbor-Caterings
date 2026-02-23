@@ -1,7 +1,7 @@
 {
-  "name": "saffron-caterers-website",
+  "name": "indian-harbor-caterings",
   "version": "1.0.0",
-  "description": "Saffron Caterers - Premier Catering & Event Planning Website",
+  "description": "The Indian Harbor - Premier Catering & Event Planning in South Florida",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",

@@ -31,7 +31,7 @@ app.use((req, res) => {
     <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>404 - Page Not Found | Saffron Caterers</title>
+      <title>404 - Page Not Found | The Indian Harbor</title>
       <link rel="stylesheet" href="/styles.css">
     </head>
     <body>
@@ -55,7 +55,7 @@ app.use((err, req, res, next) => {
     <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>500 - Server Error | Saffron Caterers</title>
+      <title>500 - Server Error | The Indian Harbor</title>
       <link rel="stylesheet" href="/styles.css">
     </head>
     <body>
@@ -71,6 +71,6 @@ app.use((err, req, res, next) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`✅ Saffron Caterers website is running on port ${PORT}`);
+  console.log(`✅ The Indian Harbor website is running on port ${PORT}`);
   console.log(`🌐 Visit: http://localhost:${PORT}`);
 });

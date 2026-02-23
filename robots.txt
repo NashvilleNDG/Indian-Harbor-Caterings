@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://www.indianharborcaterings.com/sitemap.xml
+Sitemap: https://indianharborcaterings.com/sitemap.xml
 
 # Crawl-delay
 Crawl-delay: 1
