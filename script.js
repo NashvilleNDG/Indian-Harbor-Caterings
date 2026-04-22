@@ -771,32 +771,80 @@ document.addEventListener('DOMContentLoaded', function() {
 // FAQ Toggle Functionality
 function toggleFaq(element) {
     const faqItem = element.closest('.faq-item');
+    if (!faqItem) {
+        return;
+    }
+
     const faqAnswer = faqItem.querySelector('.faq-answer');
+    if (!faqAnswer) {
+        return;
+    }
+
+    // Supports homepage inline FAQ style (display block/none + plus icon in span)
+    const spanIcon = element.querySelector('span');
+    if (spanIcon) {
+        const isOpen = faqAnswer.style.display === 'block';
+
+        document.querySelectorAll('.faq-item').forEach(item => {
+            const answer = item.querySelector('.faq-answer');
+            if (answer) {
+                answer.style.display = 'none';
+            }
+
+            const icon = item.querySelector('button span');
+            if (icon) {
+                icon.textContent = '+';
+            }
+        });
+
+        if (!isOpen) {
+            faqAnswer.style.display = 'block';
+            spanIcon.textContent = '×';
+        }
+        return;
+    }
+
+    // Supports other FAQ layouts that use .faq-question and icon rotation
     const faqIcon = element.querySelector('i');
+    const faqQuestion = faqItem.querySelector('.faq-question');
     const isOpen = faqAnswer.style.maxHeight && faqAnswer.style.maxHeight !== '0px';
-    
-    // Close all other FAQ items
+
     document.querySelectorAll('.faq-item').forEach(item => {
         if (item !== faqItem) {
             const answer = item.querySelector('.faq-answer');
             const icon = item.querySelector('.faq-question i');
-            answer.style.maxHeight = '0px';
-            answer.style.padding = '0 25px';
-            icon.style.transform = 'rotate(0deg)';
-            item.querySelector('.faq-question').style.background = 'white';
+            const question = item.querySelector('.faq-question');
+
+            if (answer) {
+                answer.style.maxHeight = '0px';
+                answer.style.padding = '0 25px';
+            }
+            if (icon) {
+                icon.style.transform = 'rotate(0deg)';
+            }
+            if (question) {
+                question.style.background = 'white';
+            }
         }
     });
-    
-    // Toggle current FAQ item
+
     if (isOpen) {
         faqAnswer.style.maxHeight = '0px';
         faqAnswer.style.padding = '0 25px';
-        faqIcon.style.transform = 'rotate(0deg)';
-        element.style.background = 'white';
+        if (faqIcon) {
+            faqIcon.style.transform = 'rotate(0deg)';
+        }
+        if (faqQuestion) {
+            faqQuestion.style.background = 'white';
+        }
     } else {
         faqAnswer.style.maxHeight = faqAnswer.scrollHeight + 'px';
         faqAnswer.style.padding = '0 25px 25px 25px';
-        faqIcon.style.transform = 'rotate(180deg)';
-        element.style.background = '#f9f9f9';
+        if (faqIcon) {
+            faqIcon.style.transform = 'rotate(180deg)';
+        }
+        if (faqQuestion) {
+            faqQuestion.style.background = '#f9f9f9';
+        }
     }
 }
