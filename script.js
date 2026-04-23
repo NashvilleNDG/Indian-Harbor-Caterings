@@ -15,20 +15,15 @@ document.querySelectorAll('.nav-link').forEach(link => {
     });
 });
 
-// Navbar scroll effect
-const navbar = document.getElementById('navbar');
-let lastScrollTop = 0;
-
-window.addEventListener('scroll', () => {
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    
-    if (scrollTop > 100) {
-        navbar.classList.add('scrolled');
-    } else {
-        navbar.classList.remove('scrolled');
+window.addEventListener('scroll', function() {
+    const navbar = document.getElementById('navbar');
+    if (navbar) {
+        if (window.scrollY > 50) {
+            navbar.style.background = 'rgba(0, 0, 0, 0.95)';
+        } else {
+            navbar.style.background = 'transparent';
+        }
     }
-    
-    lastScrollTop = scrollTop;
 });
 
 // Smooth scrolling for anchor links
