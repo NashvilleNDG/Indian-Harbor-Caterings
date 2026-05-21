@@ -101,6 +101,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       "url": "https://indianharborcaterings.com/",
       "logo": "https://indianharborcaterings.com/Images/logo.png",
       "description": "The Indian Harbor is a premier catering and event company serving Fort Lauderdale, Miami, and South Florida with wedding, corporate, and private celebration catering.",
+      "telephone": "+17542004891",
+      "email": "info@theindianharbor.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "1515 SE 17th St Suite No 102",
+        "addressLocality": "Fort Lauderdale",
+        "addressRegion": "FL",
+        "postalCode": "33316",
+        "addressCountry": "US"
+      },
       "contactPoint": {
         "@type": "ContactPoint",
         "telephone": "+17542004891",
@@ -292,7 +302,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <a href="contact.html#contact" class="nav-link cta-btn">Inquire Now</a>
                 </li>
             </ul>
-            <div class="hamburger" id="hamburger">
+            <div class="hamburger" id="hamburger" role="button" tabindex="0" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -510,13 +520,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         </div>
                     </div>
                     <div class="carousel-controls">
-                        <button class="carousel-btn prev-btn" id="prevBtn"><i class="fas fa-chevron-left"></i></button>
+                        <button class="carousel-btn prev-btn" id="prevBtn" aria-label="Previous testimonial"><i class="fas fa-chevron-left" aria-hidden="true"></i></button>
                         <div class="carousel-dots">
                             <span class="carousel-dot active" data-slide="0"></span>
                             <span class="carousel-dot" data-slide="1"></span>
                             <span class="carousel-dot" data-slide="2"></span>
                         </div>
-                        <button class="carousel-btn next-btn" id="nextBtn"><i class="fas fa-chevron-right"></i></button>
+                        <button class="carousel-btn next-btn" id="nextBtn" aria-label="Next testimonial"><i class="fas fa-chevron-right" aria-hidden="true"></i></button>
                     </div>
                 </div>
             </div>
@@ -715,10 +725,10 @@ function toggleFaq(btn) {
                     <div class="social-media-section">
                         <h4>Follow Us</h4>
                         <div class="social-icons">
-                            <a href="https://www.facebook.com/profile.php?id=61582238978420" target="_blank" rel="noopener noreferrer" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
-                            <a href="https://www.instagram.com/indianharbor_caterings/" target="_blank" rel="noopener noreferrer" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
-                            <a href="https://www.tiktok.com/@indianharbor_caterings" target="_blank" rel="noopener noreferrer" class="social-icon tiktok"><i class="fab fa-tiktok"></i></a>
-                            <a href="https://www.youtube.com/@TheIndianHarborcatering" target="_blank" rel="noopener noreferrer" class="social-icon youtube"><i class="fab fa-youtube"></i></a>
+                            <a href="https://www.facebook.com/profile.php?id=61582238978420" target="_blank" rel="noopener noreferrer" class="social-icon facebook" aria-label="The Indian Harbor on Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                            <a href="https://www.instagram.com/indianharbor_caterings/" target="_blank" rel="noopener noreferrer" class="social-icon instagram" aria-label="The Indian Harbor on Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                            <a href="https://www.tiktok.com/@indianharbor_caterings" target="_blank" rel="noopener noreferrer" class="social-icon tiktok" aria-label="The Indian Harbor on TikTok"><i class="fab fa-tiktok" aria-hidden="true"></i></a>
+                            <a href="https://www.youtube.com/@TheIndianHarborcatering" target="_blank" rel="noopener noreferrer" class="social-icon youtube" aria-label="The Indian Harbor on YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
                         </div>
                     </div>
                 </div>
@@ -726,16 +736,16 @@ function toggleFaq(btn) {
                     <form id="contactForm" action="https://formspree.io/f/xeolnlgv" method="POST">
                         <input type="hidden" name="_subject" value="New Catering Inquiry from The Indian Harbor Website">
                         <div class="form-group">
-                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                            <input type="text" id="name" name="name" placeholder="Your Name" aria-label="Your name" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" id="email" name="_replyto" placeholder="Your Email" required>
+                            <input type="email" id="email" name="_replyto" placeholder="Your Email" aria-label="Your email address" required>
                         </div>
                         <div class="form-group">
-                            <input type="tel" id="phone" name="phone" placeholder="Your Phone" required>
+                            <input type="tel" id="phone" name="phone" placeholder="Your Phone" aria-label="Your phone number" required>
                         </div>
                         <div class="form-group">
-                            <select id="eventType" name="event_type" required>
+                            <select id="eventType" name="event_type" aria-label="Event type" required>
                                 <option value="">Select Event Type</option>
                                 <option value="Wedding">Wedding</option>
                                 <option value="Corporate Event">Corporate Event</option>
@@ -744,13 +754,13 @@ function toggleFaq(btn) {
                             </select>
                         </div>
                         <div class="form-group">
-                            <input type="number" id="guestCount" name="guest_count" placeholder="Number of Guest" min="1" required>
+                            <input type="number" id="guestCount" name="guest_count" placeholder="Number of Guest" min="1" aria-label="Number of guests" required>
                         </div>
                         <div class="form-group">
-                            <input type="date" id="eventDate" name="event_date" required>
+                            <input type="date" id="eventDate" name="event_date" aria-label="Event date" required>
                         </div>
                         <div class="form-group">
-                            <textarea id="message" name="message" placeholder="Tell us about your event..." rows="5" required></textarea>
+                            <textarea id="message" name="message" placeholder="Tell us about your event..." rows="5" aria-label="Tell us about your event" required></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary">Send Inquiry</button>
                     </form>
@@ -769,10 +779,10 @@ function toggleFaq(btn) {
                     </div>
                     <p>Florida's Most Trusted Name in Catering. We bring exceptional dining experiences to your special events with authentic flavors and professional service across Fort Lauderdale, Miami, Boca Raton, Palm Beach, Orlando, Tampa, and Jacksonville.</p>
                     <div class="footer-social">
-                        <a href="https://www.facebook.com/profile.php?id=61582238978420" target="_blank" rel="noopener noreferrer" class="footer-social-link"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.instagram.com/indianharbor_caterings/" target="_blank" rel="noopener noreferrer" class="footer-social-link"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.tiktok.com/@indianharbor_caterings" target="_blank" rel="noopener noreferrer" class="footer-social-link"><i class="fab fa-tiktok"></i></a>
-                        <a href="https://www.youtube.com/@TheIndianHarborcatering" target="_blank" rel="noopener noreferrer" class="footer-social-link"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61582238978420" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="The Indian Harbor on Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                        <a href="https://www.instagram.com/indianharbor_caterings/" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="The Indian Harbor on Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                        <a href="https://www.tiktok.com/@indianharbor_caterings" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="The Indian Harbor on TikTok"><i class="fab fa-tiktok" aria-hidden="true"></i></a>
+                        <a href="https://www.youtube.com/@TheIndianHarborcatering" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="The Indian Harbor on YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
                     </div>
                 </div>
                 <div class="footer-section">

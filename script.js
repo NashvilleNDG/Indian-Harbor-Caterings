@@ -2,9 +2,18 @@
 const hamburger = document.getElementById('hamburger');
 const navMenu = document.getElementById('nav-menu');
 
-hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
+function toggleNav() {
+    const isActive = hamburger.classList.toggle('active');
     navMenu.classList.toggle('active');
+    hamburger.setAttribute('aria-expanded', isActive ? 'true' : 'false');
+}
+
+hamburger.addEventListener('click', toggleNav);
+hamburger.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        toggleNav();
+    }
 });
 
 // Close mobile menu when clicking on a link
@@ -12,6 +21,7 @@ document.querySelectorAll('.nav-link').forEach(link => {
     link.addEventListener('click', () => {
         hamburger.classList.remove('active');
         navMenu.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
     });
 });
 
@@ -246,8 +256,9 @@ if (phoneInput) {
 
 // Add scroll-to-top button
 const scrollToTopBtn = document.createElement('button');
-scrollToTopBtn.innerHTML = '<i class="fas fa-arrow-up"></i>';
+scrollToTopBtn.innerHTML = '<i class="fas fa-arrow-up" aria-hidden="true"></i>';
 scrollToTopBtn.className = 'scroll-to-top';
+scrollToTopBtn.setAttribute('aria-label', 'Scroll to top');
 scrollToTopBtn.style.cssText = `
     position: fixed;
     bottom: 30px;
