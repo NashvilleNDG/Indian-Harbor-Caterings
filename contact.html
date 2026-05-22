@@ -408,35 +408,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="contact-content">
                 <div class="left-column">
                     <div class="contact-map">
-                        <div id="mapFacade" role="button" tabindex="0" aria-label="Load Google Map showing The Indian Harbor location at 1515 SE 17th St Suite No 102, Fort Lauderdale, FL 33316" data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3579.1234567890!2d-80.1268!3d26.1008496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9006982cb646b%3A0x9ae4019c09216eab!2s1515%20SE%2017th%20St%20Suite%20No%20102%2C%20Fort%20Lauderdale%2C%20FL%2033316!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus" style="height:400px; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; cursor:pointer; background:linear-gradient(135deg,#1a1a1a 0%,#2c3e50 100%); color:#fff; padding:20px;">
-                            <i class="fas fa-map-marked-alt" aria-hidden="true" style="font-size:3rem; color:#d4a574; margin-bottom:16px;"></i>
-                            <strong style="font-family:'Playfair Display',serif; font-size:1.3rem;">View Our Location on Google Maps</strong>
-                            <span style="margin-top:8px; color:#ccc;">1515 SE 17th St Suite No 102, Fort Lauderdale, FL 33316</span>
-                            <span style="margin-top:14px; padding:10px 24px; background:#d4a574; color:#fff; border-radius:50px; font-weight:600;">Load Map</span>
-                        </div>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3579.1234567890!2d-80.1268!3d26.1008496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9006982cb646b%3A0x9ae4019c09216eab!2s1515%20SE%2017th%20St%20Suite%20No%20102%2C%20Fort%20Lauderdale%2C%20FL%2033316!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus"
+                            width="100%"
+                            height="400"
+                            style="border:0;"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Google Map showing The Indian Harbor location in Fort Lauderdale">
+                        </iframe>
                     </div>
-                    <script>
-                    (function () {
-                        var f = document.getElementById('mapFacade');
-                        if (!f) return;
-                        function loadMap() {
-                            var iframe = document.createElement('iframe');
-                            iframe.src = f.getAttribute('data-src');
-                            iframe.width = '100%';
-                            iframe.height = '400';
-                            iframe.style.border = '0';
-                            iframe.loading = 'lazy';
-                            iframe.allowFullscreen = true;
-                            iframe.referrerPolicy = 'no-referrer-when-downgrade';
-                            iframe.title = 'Google Map showing The Indian Harbor location in Fort Lauderdale';
-                            f.replaceWith(iframe);
-                        }
-                        f.addEventListener('click', loadMap);
-                        f.addEventListener('keydown', function (e) {
-                            if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); loadMap(); }
-                        });
-                    })();
-                    </script>
                     <div class="social-media-section">
                         <h4>Follow Us</h4>
                         <div class="social-icons">
