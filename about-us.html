@@ -36,7 +36,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <meta name="referrer" content="strict-origin-when-cross-origin">
     
     <link rel="canonical" href="https://indianharborcaterings.com/about-us.html">
-    
+
+    <!-- Preload LCP hero image -->
+    <link rel="preload" as="image" href="Images/Hero2.jpg" fetchpriority="high">
+
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="About The Indian Harbor | Catering Company Fort Lauderdale">
     <meta property="og:description" content="Learn about The Indian Harbor, a catering company in Fort Lauderdale & Miami with 10+ years serving South Florida weddings & events. Call (754) 200-4891.">
@@ -52,8 +55,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <meta name="twitter:image" content="https://indianharborcaterings.com/Images/logo.png">
 
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Fonts (non-render-blocking) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"></noscript>
+
+    <!-- Font Awesome (non-render-blocking) -->
+    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
 
     <!-- Schema Markup: WebSite -->
     <script type="application/ld+json" id="schema-website-about">
@@ -305,16 +316,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <!-- Hero Background Slider -->
         <div class="hero-slider">
             <div class="hero-slide active">
-                <img src="Images/Hero2.png" alt="The Indian Harbor elegant event catering setup in Fort Lauderdale" class="hero-slide-img" loading="eager" fetchpriority="high">
+                <img src="Images/Hero2.jpg" alt="The Indian Harbor elegant event catering setup in Fort Lauderdale" class="hero-slide-img" width="1280" height="720" loading="eager" fetchpriority="high">
             </div>
             <div class="hero-slide">
-                <img src="Images/Hero3.png" alt="The Indian Harbor fine dining catering experience in South Florida" class="hero-slide-img" loading="lazy">
+                <img src="Images/Hero3.jpg" alt="The Indian Harbor fine dining catering experience in South Florida" class="hero-slide-img" width="1280" height="720" loading="lazy">
             </div>
             <div class="hero-slide">
-                <img src="Images/Hero4.png" alt="The Indian Harbor wedding catering celebration in Miami" class="hero-slide-img" loading="lazy">
+                <img src="Images/Hero4.jpg" alt="The Indian Harbor wedding catering celebration in Miami" class="hero-slide-img" width="1280" height="720" loading="lazy">
             </div>
             <div class="hero-slide">
-                <img src="Images/Hero1.png" alt="The Indian Harbor luxury catering service in Fort Lauderdale" class="hero-slide-img" loading="lazy">
+                <img src="Images/Hero1.jpg" alt="The Indian Harbor luxury catering service in Fort Lauderdale" class="hero-slide-img" width="1280" height="720" loading="lazy">
             </div>
         </div>
         <div class="hero-overlay"></div>
@@ -344,7 +355,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
 
                 <div class="about-image">
-                    <img src="Images/image1.jpg" alt="The Indian Harbor catering team in Fort Lauderdale, Florida" class="about-img" loading="lazy">
+                    <img src="Images/image1.jpg" alt="The Indian Harbor catering team in Fort Lauderdale, Florida" class="about-img" width="1920" height="1080" loading="lazy">
                 </div>
             </div>
         </div>
